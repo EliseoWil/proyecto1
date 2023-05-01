@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700;900&display=swap");
+:root{
+    --naranja: #FF9B24;
+    --azul: #2770C5;
+    --rosa: #F3CFFF;
+    --obscuro: #1B1B1B;
+}
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: "Exo 2", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: white;
+}
+ul{
+    padding-left: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+/* ===================================== ENCABEZADO */
+.encabezado{
+    background-color: white;
+    width: 100%;
+}
+.menu{
+    width: 95%; 
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+@media (min-width:992px) {
+    .menu{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.logo{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo--imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.logo--imagen svg,
+.logo--hamburguesa svg{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+@media (min-width:992px) {
+    .logo--hamburguesa{
+        display: none;
+    }
+}
+.logo--imagen a{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--naranja);
+}
+.logo--imagen a span{
+    color: var(--azul);
+}
+@media (min-width:768px) {
+  .logo--imagen a{
+    font-size: 25px;
+  } 
+}
+.menu--enlaces{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    padding-block: 15px;
+    position: absolute;
+    top: 50px;
+    /* PARA DISPOSITIVOS PEQUEÑOS TIENE Q PERDERSE */
+    display: none;
+    /* z-index: 1; */
+}
+@media (min-width:992px) {
+    .menu--enlaces{
+        position: static;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+}
+.menu--enlaces nav{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navegacion{
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+@media (min-width:768px) {
+    .navegacion{
+        flex-direction: row;
+        gap: 0px;
+    }
+}
+.navegacion li{
+    width: 100%;
+    text-align: center;
+}
+.navegacion li a{
+    display: block;
+    color: var(--obscuro);
+    font-weight: 700;
+    padding-block: 5px;
+    transition: all ease .2s;
+}
+.navegacion li a:hover{
+    background-color: var(--naranja);
+    color: white;
+}
+.navegacion li:last-of-type svg{
+    width: 30px;
+    height: 30px;
+}
+.menu--empezar{
+    background-color: red;
+    text-align: center;
+}
+.btn--empezar{
+    background-color: #f18706;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 1s ease;
+}
+.btn--empezar:hover{
+    background-color: var(--azul);
+}
+/* BANNER */
